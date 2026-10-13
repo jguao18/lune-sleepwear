@@ -14,13 +14,10 @@
 
 ---
 
-## 🚀 Despliegue en Vivo con GitHub Pages
+## 🚀 Tienda en Vivo (GitHub Pages)
 
-Para ver la web en internet y compartirla:
-1. En este repositorio ve a **Settings > Pages**.
-2. En **Build and deployment > Source**, selecciona **Deploy from a branch**.
-3. En **Branch**, selecciona `main` / `(root)` y haz clic en **Save**.
-4. ¡Tu tienda estará online en: **`https://jguao18.github.io/lune-sleepwear/`**! 🌐✨
+🌐 **Visita la tienda online aquí:**  
+👉 **[https://jguao18.github.io/lune-sleepwear/](https://jguao18.github.io/lune-sleepwear/)** ✨
 
 ---
 © 2026 Lune Sleepwear. Diseñado con amor, lila y luz de luna. 💜💛
