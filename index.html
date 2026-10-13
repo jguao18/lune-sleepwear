@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lune 🌙 | Pijamas & Rituales de Descanso</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --lila-principal: #8B5CF6;
+      --lila-hover: #7C3AED;
+      --lila-suave: #DDD6FE;
+      --lila-fondo: #F5F3FF;
+      --amarillo-luna: #FDE047;
+      --amarillo-pastel: #FEF08A;
+      --amarillo-calido: #CA8A04;
+      --crema-fondo: #FDFAF5;
+      --blanco: #FFFFFF;
+      --texto-oscuro: #1E1B4B;
+      --texto-mutado: #6B7280;
+      --rosa-tierno: #FCE7F3;
+      --sombra-suave: 0 10px 30px -5px rgba(139, 92, 246, 0.15);
+      --sombra-card: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--crema-fondo);
+      color: var(--texto-oscuro);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Top Banner */
+    .top-announcement {
+      background: linear-gradient(90deg, #A78BFA 0%, #FBBF24 50%, #A78BFA 100%);
+      color: #1E1B4B;
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Header & Nav */
+    header {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(221, 214, 254, 0.5);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--texto-oscuro);
+    }
+
+    .logo-moon {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, var(--lila-suave) 0%, var(--amarillo-pastel) 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+      position: relative;
+    }
+
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--lila-principal);
+    }
+
+    .logo-text span {
+      color: var(--amarillo-calido);
+      font-style: italic;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--texto-oscuro);
+      font-weight: 600;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--lila-principal);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .cart-btn {
+      background: var(--lila-fondo);
+      border: 1px solid var(--lila-suave);
+      padding: 8px 16px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--lila-principal);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .cart-btn:hover {
+      background: var(--lila-suave);
+      transform: translateY(-1px);
+    }
+
+    .cart-count {
+      background: var(--amarillo-luna);
+      color: #713F12;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      padding: 70px 24px 60px;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--lila-fondo);
+      border: 1px solid var(--lila-suave);
+      color: var(--lila-principal);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero-badge .star {
+      color: var(--amarillo-calido);
+    }
+
+    h1.hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      color: #2E1065;
+    }
+
+    h1.hero-title span.highlight-lila {
+      color: var(--lila-principal);
+      position: relative;
+      display: inline-block;
+    }
+
+    h1.hero-title span.highlight-amarillo {
+      background: linear-gradient(120deg, rgba(254, 240, 138, 0.8) 0%, rgba(253, 224, 71, 0.9) 100%);
+      padding: 0 10px;
+      border-radius: 10px;
+      color: #713F12;
+    }
+
+    .hero-desc {
+      font-size: 17px;
+      color: var(--texto-mutado);
+      margin-bottom: 32px;
+      max-width: 520px;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--lila-principal) 0%, var(--lila-hover) 100%);
+      color: white;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 15px;
+      box-shadow: 0 10px 20px -3px rgba(139, 92, 246, 0.35);
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 26px -3px rgba(139, 92, 246, 0.45);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--texto-oscuro);
+      border: 1px solid #E5E7EB;
+      padding: 14px 24px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover {
+      background: var(--lila-fondo);
+      border-color: var(--lila-suave);
+      color: var(--lila-principal);
+    }
+
+    /* Hero Visual Card */
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-main-card {
+      background: linear-gradient(145deg, #FFFFFF 0%, #FAF5FF 100%);
+      border-radius: 32px;
+      padding: 24px;
+      border: 2px solid var(--lila-suave);
+      box-shadow: var(--sombra-card);
+      position: relative;
+    }
+
+    .hero-pajama-display {
+      background: linear-gradient(135deg, #EDE9FE 0%, #FEF9C3 100%);
+      height: 380px;
+      border-radius: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .moon-bg-art {
+      font-size: 110px;
+      animation: float 4s ease-in-out infinite;
+      filter: drop-shadow(0 15px 25px rgba(234, 179, 8, 0.25));
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(3deg); }
+    }
+
+    .floating-pill {
+      position: absolute;
+      background: white;
+      padding: 10px 18px;
+      border-radius: 50px;
+      box-shadow: var(--sombra-suave);
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(221, 214, 254, 0.8);
+      z-index: 10;
+    }
+
+    .pill-left {
+      bottom: 24px;
+      left: -20px;
+      color: var(--lila-principal);
+    }
+
+    .pill-right {
+      top: 24px;
+      right: -15px;
+      color: #A16207;
+      background: #FFFBEB;
+    }
+
+    /* Section Headers */
+    .section-title-wrap {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 48px;
+    }
+
+    .section-tag {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--lila-principal);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      color: #2E1065;
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      color: var(--texto-mutado);
+      font-size: 16px;
+    }
+
+    /* Combos Section */
+    .combos-section {
+      padding: 70px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .combos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+    }
+
+    .combo-card {
+      background: white;
+      border-radius: 24px;
+      padding: 24px;
+      border: 1px solid rgba(221, 214, 254, 0.6);
+      box-shadow: var(--sombra-card);
+      transition: all 0.3s;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .combo-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--lila-principal);
+      box-shadow: 0 25px 30px -10px rgba(139, 92, 246, 0.2);
+    }
+
+    .combo-card.featured {
+      border: 2px solid var(--lila-principal);
+      background: linear-gradient(180deg, #FFFFFF 0%, #F5F3FF 100%);
+    }
+
+    .featured-tag {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, #7C3AED 0%, #D97706 100%);
+      color: white;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 5px 16px;
+      border-radius: 50px;
+      box-shadow: 0 4px 10px rgba(124, 58, 237, 0.3);
+    }
+
+    .combo-thumb {
+      height: 200px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #EDE9FE 0%, #FEF08A 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 64px;
+      margin-bottom: 18px;
+      position: relative;
+    }
+
+    .combo-type-badge {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(4px);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--texto-oscuro);
+    }
+
+    .combo-title {
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--texto-oscuro);
+      margin-bottom: 8px;
+    }
+
+    .combo-desc {
+      color: var(--texto-mutado);
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .included-list {
+      list-style: none;
+      margin-bottom: 22px;
+      border-top: 1px dashed #E5E7EB;
+      padding-top: 14px;
+    }
+
+    .included-list li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #374151;
+      margin-bottom: 8px;
+    }
+
+    .included-list li span.icon {
+      color: var(--lila-principal);
+      font-size: 14px;
+    }
+
+    .size-selector {
+      margin-bottom: 18px;
+    }
+
+    .size-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--texto-mutado);
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .sizes-btns {
+      display: flex;
+      gap: 8px;
+    }
+
+    .size-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      border: 1px solid #D1D5DB;
+      background: white;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .size-btn.active, .size-btn:hover {
+      border-color: var(--lila-principal);
+      background: var(--lila-fondo);
+      color: var(--lila-principal);
+    }
+
+    .combo-footer {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid #F3F4F6;
+      padding-top: 16px;
+    }
+
+    .combo-price {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--texto-oscuro);
+    }
+
+    .combo-price span {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--texto-mutado);
+    }
+
+    .btn-add-cart {
+      background: var(--amarillo-pastel);
+      border: 1px solid var(--amarillo-calido);
+      color: #713F12;
+      padding: 10px 18px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-add-cart:hover {
+      background: var(--amarillo-luna);
+      transform: translateY(-2px);
+    }
+
+    /* Experiencia Unboxing */
+    .unboxing-section {
+      background: linear-gradient(180deg, #F5F3FF 0%, #FFFDF5 100%);
+      padding: 70px 24px;
+      margin-top: 40px;
+      border-top: 1px solid var(--lila-suave);
+      border-bottom: 1px solid var(--lila-suave);
+    }
+
+    .unboxing-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .unboxing-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .step-card {
+      background: white;
+      padding: 18px 22px;
+      border-radius: 18px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      border: 1px solid rgba(221, 214, 254, 0.4);
+    }
+
+    .step-number {
+      background: var(--lila-fondo);
+      color: var(--lila-principal);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+
+    .step-content h4 {
+      font-size: 16px;
+      margin-bottom: 4px;
+      color: var(--texto-oscuro);
+    }
+
+    .step-content p {
+      font-size: 13px;
+      color: var(--texto-mutado);
+    }
+
+    .unboxing-box-preview {
+      background: white;
+      border-radius: 28px;
+      padding: 30px;
+      border: 2px dashed var(--lila-suave);
+      text-align: center;
+      position: relative;
+      box-shadow: var(--sombra-card);
+    }
+
+    .box-ribbon {
+      font-size: 80px;
+      margin-bottom: 12px;
+    }
+
+    /* 📸 INSTAGRAM MOCKUP SECTION */
+    .instagram-section {
+      padding: 70px 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .insta-phone-mockup {
+      background: #FFFFFF;
+      border-radius: 40px;
+      box-shadow: 0 25px 60px -15px rgba(139, 92, 246, 0.25);
+      border: 8px solid #1E1B4B;
+      overflow: hidden;
+    }
+
+    .insta-header {
+      background: #FAFAFA;
+      padding: 16px 20px;
+      border-bottom: 1px solid #E5E7EB;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .insta-profile {
+      padding: 24px 20px;
+    }
+
+    .insta-top-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 18px;
+    }
+
+    .insta-avatar {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--lila-suave) 0%, var(--amarillo-pastel) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 38px;
+      border: 3px solid var(--lila-principal);
+      position: relative;
+    }
+
+    .insta-stats {
+      display: flex;
+      gap: 20px;
+      text-align: center;
+      flex: 1;
+    }
+
+    .stat-num {
+      font-weight: 800;
+      font-size: 16px;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--texto-mutado);
+    }
+
+    .insta-bio h3 {
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .insta-bio p {
+      font-size: 13px;
+      color: #374151;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    .insta-stories {
+      display: flex;
+      gap: 14px;
+      padding: 16px 0;
+      overflow-x: auto;
+      border-top: 1px solid #F3F4F6;
+      border-bottom: 1px solid #F3F4F6;
+    }
+
+    .story-bubble {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    .story-ring {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #A78BFA, #FBBF24);
+      padding: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .story-inner {
+      width: 100%;
+      height: 100%;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+
+    .story-name {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--texto-oscuro);
+    }
+
+    .insta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+      background: #FAFAFA;
+      padding: 4px 0;
+    }
+
+    .insta-post {
+      aspect-ratio: 1/1;
+      background: linear-gradient(135deg, #EDE9FE 0%, #FEF9C3 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      text-align: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: #4338CA;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .insta-post:hover {
+      filter: brightness(0.96);
+    }
+
+    .insta-post-icon {
+      font-size: 28px;
+      margin-bottom: 4px;
+    }
+
+    /* Modal Carrito */
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: -420px;
+      width: 380px;
+      height: 100vh;
+      background: white;
+      box-shadow: -10px 0 30px rgba(0,0,0,0.15);
+      z-index: 1000;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      transition: right 0.3s ease;
+    }
+
+    .cart-drawer.open {
+      right: 0;
+    }
+
+    .cart-drawer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #E5E7EB;
+      padding-bottom: 12px;
+    }
+
+    .cart-items-list {
+      flex: 1;
+      overflow-y: auto;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #F3F4F6;
+    }
+
+    .cart-drawer-footer {
+      border-top: 1px solid #E5E7EB;
+      padding-top: 16px;
+    }
+
+    .total-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #25D366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 99;
+      transition: all 0.2s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: #1E1B4B;
+      color: white;
+      text-align: center;
+      padding: 36px 20px;
+      margin-top: 60px;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: var(--amarillo-luna);
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 40px;
+      }
+      h1.hero-title {
+        font-size: 36px;
+      }
+      .unboxing-container {
+        grid-template-columns: 1fr;
+      }
+      nav ul {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement -->
+  <div class="top-announcement">
+    <span>✨ Lanzamiento Oficial • Envíos a todo el país • Kits de Descanso Aesthetic 🌙</span>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="brand-logo">
+        <div class="logo-moon">🌙</div>
+        <div class="logo-text">Lune <span>Sleepwear</span></div>
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="#combos">Kits & Combos</a></li>
+          <li><a href="#unboxing">Experiencia Unboxing</a></li>
+          <li><a href="#instagram">Feed de Instagram</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-btn" onclick="toggleCart()">
+          <span>🛍️ Tu Carrito</span>
+          <span class="cart-count" id="navCartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <span class="star">★</span> Colección Ritual de Sueños 2026
+      </div>
+      <h1 class="hero-title">
+        Pijamas que abrazan tu piel y <span class="highlight-lila">consienten</span> tus <span class="highlight-amarillo">noches</span>.
+      </h1>
+      <p class="hero-desc">
+        En Lune no vendemos solo una prenda para dormir. Creamos tu momento favorito del día: suavidad, colores tiernos, accesorios de autocuidado y un aroma que te transporta a soñar.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#combos" class="btn-primary">Ver Combos de Lanzamiento ✨</a>
+        <a href="#instagram" class="btn-secondary">Ver Feed en Instagram 📸</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-main-card">
+        <div class="hero-pajama-display" style="background: none; padding: 0;">
+          <img src="pijama_pantalon.jpg" alt="Pijama Pantalón Rosado Satín Lune" style="width: 100%; height: 100%; object-fit: cover; border-radius: 24px;">
+          <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(0deg, rgba(30,27,75,0.85) 0%, transparent 100%); padding: 20px; border-radius: 0 0 24px 24px; color: white; text-align: left;">
+            <h3 style="font-family:'Playfair Display', serif; font-size: 20px;">Colección Variedad & Color</h3>
+            <p style="font-size: 13px; opacity: 0.95;">Satín sedoso en rosado blush, azul cielo, verde menta y más</p>
+          </div>
+        </div>
+
+        <div class="floating-pill pill-left">
+          <span>🌸</span> Algodón & Satín Premium
+        </div>
+        <div class="floating-pill pill-right">
+          <span>🎁</span> Cajita de regalo aromatizada
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Combos Section -->
+  <section class="combos-section" id="combos">
+    <div class="section-title-wrap">
+      <span class="section-tag">Colección de Estreno</span>
+      <h2 class="section-title">Kits de Descanso Lune</h2>
+      <p class="section-subtitle">Cada combo incluye su pijama, accesorios de autocuidado y la icónica experiencia de empaque de regalo Lune.</p>
+    </div>
+
+    <div class="combos-grid">
+      <!-- Combo 1: Corta -->
+      <div class="combo-card">
+        <div class="combo-thumb" style="background: none; overflow: hidden; padding: 0;">
+          <img src="pijama_corta.jpg" alt="Combo Dulces Sueños - Pijama Corta Lune" style="width: 100%; height: 100%; object-fit: cover; border-radius: 18px;">
+          <span class="combo-type-badge">Pijama Corta (Short & Top)</span>
+        </div>
+        <h3 class="combo-title">Combo Dulces Sueños</h3>
+        <p class="combo-desc">Conjunto fresco de short y camisa en azul cielo pastel con ribetes blancos. Algodón ultra suave para noches frescas y mañanas relajadas.</p>
+        
+        <ul class="included-list">
+          <li><span class="icon">✔</span> Pijama Corta 2 piezas (Algodón Pastel)</li>
+          <li><span class="icon">✔</span> Antifaz acolchado de descanso a juego</li>
+          <li><span class="icon">✔</span> Medias tiernas de algodón acanalado</li>
+          <li><span class="icon">✔</span> Bolsa boutique Lune con lazo y aroma relajante</li>
+        </ul>
+
+        <div class="size-selector">
+          <span class="size-label">Selecciona tu Talla:</span>
+          <div class="sizes-btns">
+            <button class="size-btn active" onclick="selectSize(this)">S</button>
+            <button class="size-btn" onclick="selectSize(this)">M</button>
+            <button class="size-btn" onclick="selectSize(this)">L</button>
+          </div>
+        </div>
+
+        <div class="combo-footer">
+          <div class="combo-price">$72.000 <span>COP</span></div>
+          <button class="btn-add-cart" onclick="addToCart('Combo Dulces Sueños (Pijama Corta)', 72000)">+ Agregar al Kit</button>
+        </div>
+      </div>
+
+      <!-- Combo 2 (Bestseller): Pantalón Largo -->
+      <div class="combo-card featured">
+        <div class="featured-tag">★ El Favorito Lune</div>
+        <div class="combo-thumb" style="background: none; overflow: hidden; padding: 0;">
+          <img src="pijama_pantalon.jpg" alt="Combo Sleep & Glow - Pijama Pantalón Lune" style="width: 100%; height: 100%; object-fit: cover; border-radius: 18px;">
+          <span class="combo-type-badge">Pijama Pantalón Largo</span>
+        </div>
+        <h3 class="combo-title">Combo Sleep & Glow</h3>
+        <p class="combo-desc">Set de camisa manga larga y pantalón clásico en satín de seda rosado blush con ribetes en contraste. Elegante, suave y reconfortante.</p>
+        
+        <ul class="included-list">
+          <li><span class="icon">✔</span> Pijama Pantalón Largo 2 piezas (Satín Rosado)</li>
+          <li><span class="icon">✔</span> Balaca spa de toalla para lavado facial</li>
+          <li><span class="icon">✔</span> Parches de colágeno + Mascarilla facial</li>
+          <li><span class="icon">✔</span> Cajita rígida con lazo lila y tarjeta dedicatoria</li>
+        </ul>
+
+        <div class="size-selector">
+          <span class="size-label">Selecciona tu Talla:</span>
+          <div class="sizes-btns">
+            <button class="size-btn" onclick="selectSize(this)">S</button>
+            <button class="size-btn active" onclick="selectSize(this)">M</button>
+            <button class="size-btn" onclick="selectSize(this)">L</button>
+          </div>
+        </div>
+
+        <div class="combo-footer">
+          <div class="combo-price">$85.000 <span>COP</span></div>
+          <button class="btn-add-cart" onclick="addToCart('Combo Sleep & Glow (Pijama Larga)', 85000)" style="background: var(--lila-principal); color: white; border-color: var(--lila-hover);">+ Agregar al Kit</button>
+        </div>
+      </div>
+
+      <!-- Combo 3: Satín & Bata -->
+      <div class="combo-card">
+        <div class="combo-thumb" style="background: none; overflow: hidden; padding: 0;">
+          <img src="pijama_satin.jpg" alt="Combo Reina de Noche - Satín y Bata Lune" style="width: 100%; height: 100%; object-fit: cover; border-radius: 18px;">
+          <span class="combo-type-badge">Satín Sedoso & Bata Kimono</span>
+        </div>
+        <h3 class="combo-title">Combo Reina de Noche</h3>
+        <p class="combo-desc">Tacto de seda brillante con bata kimono en tono verde menta/salvia y cosmetiquera acolchada. Para sentirte una reina soñando.</p>
+        
+        <ul class="included-list">
+          <li><span class="icon">✔</span> Conjunto y Bata en Satín de Seda (Verde Menta)</li>
+          <li><span class="icon">✔</span> Cosmetiquera acolchada en tono lila</li>
+          <li><span class="icon">✔</span> Antifaz de satín + Scrunchie a juego</li>
+          <li><span class="icon">✔</span> Empaque de lujo con papel de seda aromatizado</li>
+        </ul>
+
+        <div class="size-selector">
+          <span class="size-label">Selecciona tu Talla:</span>
+          <div class="sizes-btns">
+            <button class="size-btn active" onclick="selectSize(this)">S</button>
+            <button class="size-btn" onclick="selectSize(this)">M</button>
+            <button class="size-btn" onclick="selectSize(this)">L</button>
+          </div>
+        </div>
+
+        <div class="combo-footer">
+          <div class="combo-price">$110.000 <span>COP</span></div>
+          <button class="btn-add-cart" onclick="addToCart('Combo Reina de Noche (Satín)', 110000)">+ Agregar al Kit</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiencia Unboxing -->
+  <section class="unboxing-section" id="unboxing">
+    <div class="unboxing-container">
+      <div class="unboxing-text">
+        <span class="section-tag">El Secreto de Lune</span>
+        <h2 class="section-title">La Experiencia del Unboxing</h2>
+        <p style="color: var(--texto-mutado); margin-bottom: 24px;">
+          Queremos que abrir tu paquete Lune sea tan emocionante como recibir un regalo sorpresa. Cada detalle está pensado con amor:
+        </p>
+
+        <div class="unboxing-steps">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h4>El Empaque Boutique</h4>
+              <p>Caja o bolsa en colores pasteles sellada con lazo y stickers exclusivos de la luna Lune.</p>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h4>El Aroma Sensorial</h4>
+              <p>Rociamos cada papel de seda con un aroma delicado de lavanda y vainilla que dura días.</p>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h4>Tarjeta con Dedicatoria</h4>
+              <p>Un mensaje inspirador para que sueñes en grande y recuerdes priorizar tu descanso.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="unboxing-box-preview" style="padding: 16px; overflow: hidden;">
+        <img src="unboxing_caja.jpg" alt="Caja de Unboxing Lune" style="width: 100%; height: 260px; object-fit: cover; border-radius: 20px; margin-bottom: 14px;">
+        <h3 style="font-family:'Playfair Display', serif; font-size: 22px; color: var(--texto-oscuro); margin-bottom: 6px;">Cajita Ritual Lune 🌙</h3>
+        <p style="color: var(--texto-mutado); font-size: 13px; margin-bottom: 16px;">Lista para auto-consentirte o regalar con aroma relajante.</p>
+        <span style="background: var(--amarillo-pastel); color: #713F12; padding: 6px 16px; border-radius: 20px; font-weight: 700; font-size: 13px;">
+          ✨ Incluido con amor en todos los combos
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📸 INSTAGRAM FEED PREVIEW -->
+  <section class="instagram-section" id="instagram">
+    <div class="section-title-wrap">
+      <span class="section-tag">Visualiza Tu Cuenta</span>
+      <h2 class="section-title">Así se verá el Instagram de Lune</h2>
+      <p class="section-subtitle">Diseñado con la paleta lila, amarillo y blanco para enamorar visualmente desde el primer segundo.</p>
+    </div>
+
+    <div class="insta-phone-mockup">
+      <!-- Instagram Header -->
+      <div class="insta-header">
+        <span>lune.sleepwear</span>
+        <span>⋮</span>
+      </div>
+
+      <!-- Profile Details -->
+      <div class="insta-profile">
+        <div class="insta-top-row">
+          <div class="insta-avatar">🌙</div>
+          <div class="insta-stats">
+            <div>
+              <div class="stat-num">12</div>
+              <div class="stat-label">Publicaciones</div>
+            </div>
+            <div>
+              <div class="stat-num">1.2k</div>
+              <div class="stat-label">Seguidores</div>
+            </div>
+            <div>
+              <div class="stat-num">340</div>
+              <div class="stat-label">Siguiendo</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="insta-bio">
+          <h3>Lune 🌙 | Pijamas & Sleepwear</h3>
+          <p>
+            ✨ Tu ritual de descanso favorito.<br>
+            💜 Algodón & Satín suave para soñar bonito.<br>
+            🎁 Combos con antifaz, skincare & empaque boutique.<br>
+            🛵 Envíos a todo el país • DM para pedidos.
+          </p>
+        </div>
+
+        <!-- Stories Highlights -->
+        <div class="insta-stories">
+          <div class="story-bubble" onclick="abrirDetalleHistoria('combos')">
+            <div class="story-ring">
+              <div class="story-inner">✨</div>
+            </div>
+            <span class="story-name">Combos</span>
+          </div>
+
+          <div class="story-bubble" onclick="abrirDetalleHistoria('unboxing')">
+            <div class="story-ring">
+              <div class="story-inner">📦</div>
+            </div>
+            <span class="story-name">Unboxing</span>
+          </div>
+
+          <div class="story-bubble" onclick="abrirDetalleHistoria('tallas')">
+            <div class="story-ring">
+              <div class="story-inner">📏</div>
+            </div>
+            <span class="story-name">Tallas</span>
+          </div>
+
+          <div class="story-bubble" onclick="abrirDetalleHistoria('clientas')">
+            <div class="story-ring">
+              <div class="story-inner">💌</div>
+            </div>
+            <span class="story-name">Clientas</span>
+          </div>
+        </div>
+
+        <div style="background: var(--amarillo-pastel); padding: 8px 14px; border-radius: 12px; font-size: 12px; color: #713F12; margin: 12px 0 6px; display: flex; align-items: center; justify-content: space-between;">
+          <span>💡 <strong>Toca cualquier foto</strong> para ver la idea de grabación y el texto del Playbook.</span>
+          <span style="font-size: 14px;">👉</span>
+        </div>
+      </div>
+
+      <!-- Feed Grid -->
+      <div class="insta-grid">
+        <div class="insta-post" style="padding: 0; overflow: hidden;" onclick="abrirDetallePost(0)">
+          <img src="pijama_pantalon.jpg" alt="Pijama Pantalón" style="width: 100%; height: 100%; object-fit: cover;">
+          <span style="position: absolute; bottom: 6px; left: 6px; background: rgba(30,27,75,0.75); color: white; padding: 2px 6px; border-radius: 4px; font-size: 10px;">🌙 GRWM Noche</span>
+        </div>
+        <div class="insta-post" style="padding: 0; overflow: hidden;" onclick="abrirDetallePost(1)">
+          <img src="unboxing_caja.jpg" alt="Unboxing Caja" style="width: 100%; height: 100%; object-fit: cover;">
+          <span style="position: absolute; bottom: 6px; left: 6px; background: rgba(30,27,75,0.75); color: white; padding: 2px 6px; border-radius: 4px; font-size: 10px;">📦 Unboxing ASMR</span>
+        </div>
+        <div class="insta-post" style="padding: 0; overflow: hidden;" onclick="abrirDetallePost(2)">
+          <img src="pijama_corta.jpg" alt="Pijama Corta" style="width: 100%; height: 100%; object-fit: cover;">
+          <span style="position: absolute; bottom: 6px; left: 6px; background: rgba(30,27,75,0.75); color: white; padding: 2px 6px; border-radius: 4px; font-size: 10px;">☁️ ¿Por qué Kits?</span>
+        </div>
+        <div class="insta-post" style="padding: 0; overflow: hidden;" onclick="abrirDetallePost(3)">
+          <img src="pijama_satin.jpg" alt="Satín & Bata" style="width: 100%; height: 100%; object-fit: cover;">
+          <span style="position: absolute; bottom: 6px; left: 6px; background: rgba(30,27,75,0.75); color: white; padding: 2px 6px; border-radius: 4px; font-size: 10px;">✨ Algodón vs Satín</span>
+        </div>
+        <div class="insta-post" style="padding: 0; overflow: hidden;" onclick="abrirDetallePost(4)">
+          <img src="unboxing_caja.jpg" alt="Kit de Regalo" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.95);">
+          <span style="position: absolute; bottom: 6px; left: 6px; background: rgba(30,27,75,0.75); color: white; padding: 2px 6px; border-radius: 4px; font-size: 10px;">🎁 Regalo Ideal</span>
+        </div>
+        <div class="insta-post" style="padding: 0; overflow: hidden;" onclick="abrirDetallePost(5)">
+          <img src="pijama_corta.jpg" alt="Algodón Pastel" style="width: 100%; height: 100%; object-fit: cover; filter: hue-rotate(10deg);">
+          <span style="position: absolute; bottom: 6px; left: 6px; background: rgba(30,27,75,0.75); color: white; padding: 2px 6px; border-radius: 4px; font-size: 10px;">💜 Mi Historia</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carrito Drawer Flotante -->
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3 style="color: var(--lila-principal); font-size: 20px;">Tu Pedido Lune 🌙</h3>
+      <button onclick="toggleCart()" style="background:none; border:none; font-size:22px; cursor:pointer;">✕</button>
+    </div>
+
+    <div class="cart-items-list" id="cartItemsList">
+      <p style="color: var(--texto-mutado); text-align: center; margin-top: 40px;">Tu carrito está vacío.<br>Elige un combo para comenzar ✨</p>
+    </div>
+
+    <div class="cart-drawer-footer">
+      <div class="total-row">
+        <span>Total Estimado:</span>
+        <span id="cartTotalVal">$0 COP</span>
+      </div>
+      <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="checkoutWhatsApp()">
+        Confirmar por WhatsApp 💬
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal Interactivo del Playbook de Instagram -->
+  <div id="instaModal" style="display: none; position: fixed; inset: 0; background: rgba(30, 27, 75, 0.7); backdrop-filter: blur(6px); z-index: 2000; align-items: center; justify-content: center; padding: 16px;" onclick="cerrarModalInsta(event)">
+    <div style="background: white; border-radius: 24px; max-width: 780px; width: 100%; max-height: 90vh; overflow-y: auto; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.3); border: 1px solid var(--lila-suave);" onclick="event.stopPropagation()">
+      
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 22px; border-bottom: 1px solid #E5E7EB;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, var(--lila-suave), var(--amarillo-pastel)); display: flex; align-items: center; justify-content: center; font-size: 16px;">🌙</div>
+          <div>
+            <strong style="font-size: 14px; color: var(--texto-oscuro);">@lune.sleepwear</strong>
+            <span style="font-size: 11px; color: var(--lila-principal); display: block; font-weight: 600;">Playbook de Grabación para Ella 📖</span>
+          </div>
+        </div>
+        <button onclick="cerrarModalInsta()" style="background: none; border: none; font-size: 22px; cursor: pointer; color: var(--texto-mutado);">✕</button>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr; gap: 20px; padding: 22px;" id="modalBodyGrid">
+        <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 20px;">
+          
+          <!-- Media Preview -->
+          <div>
+            <img id="modalMediaImg" src="pijama_pantalon.jpg" alt="Preview Post" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+            <div id="modalAudio" style="margin-top: 10px; background: var(--lila-fondo); border: 1px solid var(--lila-suave); padding: 8px 12px; border-radius: 10px; font-size: 12px; color: var(--lila-principal); font-weight: 600;">
+              🎵 Audio: ASMR crujiente + lofi relajante
+            </div>
+          </div>
+
+          <!-- Guion e Info -->
+          <div>
+            <span id="modalFormat" style="display: inline-block; background: var(--amarillo-pastel); color: #713F12; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 800; text-transform: uppercase; margin-bottom: 8px;">Reel de Instagram</span>
+            <h3 id="modalTitle" style="font-size: 18px; color: var(--texto-oscuro); margin-bottom: 12px;"></h3>
+
+            <div style="background: #F8FAFC; border-radius: 12px; padding: 12px; margin-bottom: 12px; border: 1px solid #E2E8F0;">
+              <strong style="font-size: 12px; color: var(--lila-principal); display: block; margin-bottom: 4px;">⚡ Gancho inicial (0 a 3 seg):</strong>
+              <p id="modalHook" style="font-size: 13px; color: #334155; font-style: italic;"></p>
+            </div>
+
+            <div style="background: #FFFDF5; border-radius: 12px; padding: 12px; margin-bottom: 12px; border: 1px solid #FEF08A;">
+              <strong style="font-size: 12px; color: #854D0E; display: block; margin-bottom: 6px;">🎬 Tomas a grabar con tu celular:</strong>
+              <ul id="modalShots" style="font-size: 12px; color: #475569; padding-left: 18px; line-height: 1.5;"></ul>
+            </div>
+
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <strong style="font-size: 12px; color: var(--texto-oscuro);">✍️ Pie de foto (Copy listo):</strong>
+                <button onclick="copiarCaption()" id="btnCopyCaption" style="background: var(--lila-fondo); border: 1px solid var(--lila-suave); color: var(--lila-principal); font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 15px; cursor: pointer;">📋 Copiar</button>
+              </div>
+              <div id="modalCaption" style="font-size: 12px; color: #1E293B; background: #F1F5F9; padding: 10px; border-radius: 10px; white-space: pre-line; max-height: 110px; overflow-y: auto; line-height: 1.4;"></div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WhatsApp Flotante -->
+  <a href="https://wa.me/573000000000?text=Hola%20Lune!%20Quiero%20conocer%20los%20combos%20disponibles" target="_blank" class="whatsapp-float">
+    <span>💬 WhatsApp Lune</span>
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <div style="font-size: 24px; margin-bottom: 8px;">🌙 LUNE</div>
+    <p>Pijamas & Rituales de Descanso • Diseñado con ternura, lila y luz de luna.</p>
+    <p style="margin-top: 12px; font-size: 12px; opacity: 0.7;">© 2026 Lune Sleepwear. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    let cart = [];
+
+    // Base de datos del Playbook de Instagram para Lune
+    const playbookData = [
+      {
+        titulo: "GRWM: Mi ritual de buenas noches",
+        formato: "Reel Aesthetic / Voz en off tierna",
+        img: "pijama_pantalon.jpg",
+        audio: "🎵 Audio viral aesthetic 'night routine' o voz en off dulce",
+        hook: "\"Lo único que me salvó el día fue saber que llegaba a esto...\"",
+        tomas: [
+          "Desmaquillándote frente al espejo con la balaca spa.",
+          "Poniéndote la pijama de satín rosado suave.",
+          "Aplicando crema de manos o hidratante de labios con luz tenue.",
+          "Metiéndote a la cama y colocándote el antifaz acolchado de descanso."
+        ],
+        caption: "Dormir con una pijama suavecita cambia absolutamente todo el mood después de un día pesado. ✨💤\n\nCuéntanos: ¿eres team pijama corta o de pantalón? 👇🌙\n\n#LuneSleepwear #RitualDeNoche #PijamasColombia #GRWMNoche #Aesthetic"
+      },
+      {
+        titulo: "El Unboxing Sensorial (Empaca conmigo)",
+        formato: "Reel ASMR / Sonidos reales",
+        img: "unboxing_caja.jpg",
+        audio: "🎵 Sonido de papel crujiente + spray textil + música lofi de fondo",
+        hook: "\"¿A qué huele el descanso perfecto? ✨ (Sube el volumen 🎧)\"",
+        tomas: [
+          "Doblando con cariño la pijama con sus ribetes limpios.",
+          "Acomodando el antifaz y las medias tiernas en la caja lila.",
+          "Rociando el splash textil en el papel de seda (cámara lenta).",
+          "Pegando el sticker de la luna y cerrando con el lazo amarillo mantequilla."
+        ],
+        caption: "Cada paquetito de Lune va cargado de amor, aroma suave y la promesa de un descanso delicioso 🌙💤\n\n¿Ya elegiste tu combo favorito para consentirte? Escríbenos al DM o WhatsApp ✨\n\n#LuneSleepwear #UnboxingASMR #EmpacaConmigo #SleepwearAesthetic #RegalosTiernos"
+      },
+      {
+        titulo: "¿Por qué en combos y no pijamas solas?",
+        formato: "Reel Explicativo / Propuesta de Valor",
+        img: "pijama_corta.jpg",
+        audio: "🎵 Beat suave y alegre",
+        hook: "\"La razón por la que en Lune no te vendemos solo una prenda...\"",
+        tomas: [
+          "Mostrar una pijama sola en una silla (lo común).",
+          "Mostrar la experiencia completa: pijama + antifaz + medias + empaque de regalo.",
+          "Sonreír a la cámara explicando que descansar es un ritual de autocuidado."
+        ],
+        caption: "Queremos que irte a dormir sea tu momento favorito de las 24 horas del día. Por eso creamos nuestros kits completos de descanso Lune 🌙☁️\n\nTodo viene en cajita de regalo lista para ti. ¡Pregúntanos por tu talla!\n\n#LuneSleepwear #KitsDeDescanso #PijamasDeAlgodon #AmorPropio"
+      },
+      {
+        titulo: "Batalla de Telas: ¿Algodón o Satín?",
+        formato: "Reel Comparativo / Interacción",
+        img: "pijama_satin.jpg",
+        audio: "🎵 Tendencia 'this or that'",
+        hook: "\"¿Eres Team Algodón o Team Satín? ☁️ vs ✨\"",
+        tomas: [
+          "Primer plano a la textura del algodón azul (frescura, suavidad para el calor).",
+          "Primer plano al brillo y caída elegante del satín verde menta.",
+          "Mostrando cómo cae la tela en movimiento sobre la cama."
+        ],
+        caption: "El algodón para los días de máximo relax y el satín para sentirte una reina soñando 💅\n\nDeja tu emoji favorito en los comentarios: ☁️ para algodón o ✨ para satín.\n\n#LuneSleepwear #SatinPajamas #AlgodonSuave #DilemmaDePijamas"
+      },
+      {
+        titulo: "El regalo que ninguna amiga rechazaría",
+        formato: "Reel de Regalo / Cumpleaños",
+        img: "unboxing_caja.jpg",
+        audio: "🎵 Audio tierno de celebración / amistad",
+        hook: "\"POV: Tu mejor amiga cumple años y odia los regalos aburridos...\"",
+        tomas: [
+          "Llegando con la cajita lila y lazo amarillo de Lune.",
+          "La reacción abriendo la caja y sintiendo el aroma delicioso a lavanda.",
+          "Sacando el antifaz y la pijama sorprendida y feliz."
+        ],
+        caption: "Salva cualquier cumpleaños, aniversario o autoregalo con una cajita Lune 🎁✨ Viene lista para entregar con tarjeta dedicatoria incluida.\n\n¿A qué amiga etiquetarías para que te la regale? 👇\n\n#LuneSleepwear #RegaloPerfecto #RegaloParaAmigas #DetallesEspeciales"
+      },
+      {
+        titulo: "Construyendo mi propia marca a mis [años]",
+        formato: "Reel Storytelling / Detrás de Cámaras",
+        img: "pijama_corta.jpg",
+        audio: "🎵 Música inspiracional suave",
+        hook: "\"Nadie te dice lo emocionante y retador que es empezar tu propia marca...\"",
+        tomas: [
+          "Tú eligiendo los tonos lila y amarillo y el logo de la luna.",
+          "Revisando las primeras muestras y la suavidad de las costuras.",
+          "Empacando los primeros pedidos con toda la ilusión del mundo."
+        ],
+        caption: "Detrás de cada costura y cada cajita de Lune hay un sueño enorme de emprender y crear algo con amor 💛💜\n\nGracias de corazón a cada personita que cree en esto desde el día 1. ¡Lo mejor está por venir! 🌙\n\n#LuneSleepwear #EmprendimientoFemenino #HechoConAmor #Storytelling"
+      }
+    ];
+
+    function abrirDetallePost(index) {
+      const data = playbookData[index];
+      if (!data) return;
+
+      document.getElementById('modalTitle').innerText = data.titulo;
+      document.getElementById('modalFormat').innerText = data.formato;
+      document.getElementById('modalMediaImg').src = data.img;
+      document.getElementById('modalAudio').innerText = data.audio;
+      document.getElementById('modalHook').innerText = data.hook;
+
+      const shotsList = document.getElementById('modalShots');
+      shotsList.innerHTML = '';
+      data.tomas.forEach(t => {
+        shotsList.innerHTML += `<li>${t}</li>`;
+      });
+
+      document.getElementById('modalCaption').innerText = data.caption;
+      document.getElementById('btnCopyCaption').innerText = '📋 Copiar';
+
+      const modal = document.getElementById('instaModal');
+      modal.style.display = 'flex';
+    }
+
+    function abrirDetalleHistoria(tipo) {
+      const modal = document.getElementById('instaModal');
+      const shotsList = document.getElementById('modalShots');
+      shotsList.innerHTML = '';
+
+      if (tipo === 'combos') {
+        document.getElementById('modalTitle').innerText = "Historias Destacadas: Combos Lune";
+        document.getElementById('modalFormat').innerText = "HISTORIAS DESTACADAS (HIGHLIGHTS)";
+        document.getElementById('modalMediaImg').src = "pijama_pantalon.jpg";
+        document.getElementById('modalAudio').innerText = "🎵 Música de fondo suave en stories";
+        document.getElementById('modalHook').innerText = "\"Conoce nuestros 3 kits oficiales de descanso 🌙\"";
+        shotsList.innerHTML = `
+          <li>Story 1: Foto del Combo Dulces Sueños ($72.000 COP) explicando qué incluye.</li>
+          <li>Story 2: Foto del Combo Sleep & Glow ($85.000 COP) destacando el skincare.</li>
+          <li>Story 3: Foto del Combo Reina de Noche ($110.000 COP) con bata de satín.</li>
+          <li>Story 4: Sticker de enlace directo al WhatsApp para pedidos.</li>
+        `;
+        document.getElementById('modalCaption').innerText = "Plantilla de historias listas para guardar en tus Highlights de Instagram.";
+      } else if (tipo === 'unboxing') {
+        document.getElementById('modalTitle').innerText = "Historias Destacadas: Experiencia Unboxing";
+        document.getElementById('modalFormat').innerText = "HISTORIAS DESTACADAS (HIGHLIGHTS)";
+        document.getElementById('modalMediaImg').src = "unboxing_caja.jpg";
+        document.getElementById('modalAudio').innerText = "🎵 Sonido ambiente de empaque";
+        document.getElementById('modalHook').innerText = "\"Así cuidamos cada detalle de tu paquete 🎁\"";
+        shotsList.innerHTML = `
+          <li>Story 1: Primer plano a la cajita lila y cinta amarilla.</li>
+          <li>Story 2: Mostrando el aroma textil rociado en el papel de seda.</li>
+          <li>Story 3: Tarjeta dedicatoria escrita a mano.</li>
+        `;
+        document.getElementById('modalCaption').innerText = "Comparte con tus seguidoras cómo se empaca cada pedido con amor y aroma.";
+      } else if (tipo === 'tallas') {
+        document.getElementById('modalTitle').innerText = "Historias Destacadas: Guía de Tallas";
+        document.getElementById('modalFormat').innerText = "HISTORIAS DESTACADAS (HIGHLIGHTS)";
+        document.getElementById('modalMediaImg').src = "pijama_corta.jpg";
+        document.getElementById('modalAudio').innerText = "🎵 Audio neutro";
+        document.getElementById('modalHook').innerText = "\"Encuentra tu talla perfecta en Lune ✨\"";
+        shotsList.innerHTML = `
+          <li>Story 1: Tabla de medidas S, M, L (pecho, cintura, cadera).</li>
+          <li>Story 2: Foto en modelo explicando la caída holgada y cómoda para dormir.</li>
+        `;
+        document.getElementById('modalCaption').innerText = "Guía visual de tallas para resolver dudas rápidas en historias.";
+      } else {
+        document.getElementById('modalTitle').innerText = "Historias Destacadas: Nuestras Clientas";
+        document.getElementById('modalFormat').innerText = "HISTORIAS DESTACADAS (HIGHLIGHTS)";
+        document.getElementById('modalMediaImg').src = "pijama_satin.jpg";
+        document.getElementById('modalAudio').innerText = "🎵 Canción tierna de gratitud";
+        document.getElementById('modalHook').innerText = "\"Lune en sus casas... gracias por soñar con nosotras 💜\"";
+        shotsList.innerHTML = `
+          <li>Story 1: Repost de historias donde etiqueten a @lune.sleepwear.</li>
+          <li>Story 2: Capturas de chats de WhatsApp con mensajes de clientas felices.</li>
+        `;
+        document.getElementById('modalCaption').innerText = "Testimonios y fotos reales para generar confianza inmediata.";
+      }
+
+      modal.style.display = 'flex';
+    }
+
+    function cerrarModalInsta(event) {
+      if (event && event.target && event.target.id !== 'instaModal' && event.target.tagName !== 'BUTTON') {
+        return;
+      }
+      document.getElementById('instaModal').style.display = 'none';
+    }
+
+    function copiarCaption() {
+      const text = document.getElementById('modalCaption').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById('btnCopyCaption');
+        btn.innerText = '✅ ¡Copiado!';
+        setTimeout(() => { btn.innerText = '📋 Copiar'; }, 2000);
+      });
+    }
+
+    function selectSize(btn) {
+      const parent = btn.parentElement;
+      parent.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    function toggleCart() {
+      const drawer = document.getElementById('cartDrawer');
+      drawer.classList.toggle('open');
+    }
+
+    function addToCart(nombre, precio) {
+      cart.push({ nombre, precio });
+      actualizarCarrito();
+      const drawer = document.getElementById('cartDrawer');
+      if (!drawer.classList.contains('open')) {
+        drawer.classList.add('open');
+      }
+    }
+
+    function actualizarCarrito() {
+      document.getElementById('navCartCount').innerText = cart.length;
+      const list = document.getElementById('cartItemsList');
+      
+      if (cart.length === 0) {
+        list.innerHTML = `<p style="color: var(--texto-mutado); text-align: center; margin-top: 40px;">Tu carrito está vacío.<br>Elige un combo para comenzar ✨</p>`;
+        document.getElementById('cartTotalVal').innerText = "$0 COP";
+        return;
+      }
+
+      let html = '';
+      let total = 0;
+      cart.forEach((item, index) => {
+        total += item.precio;
+        html += `
+          <div class="cart-item">
+            <div>
+              <strong style="font-size: 14px;">${item.nombre}</strong>
+              <div style="font-size: 12px; color: var(--texto-mutado);">$${item.precio.toLocaleString('es-CO')} COP</div>
+            </div>
+            <button onclick="removeItem(${index})" style="background: none; border: none; color: #EF4444; font-weight: bold; cursor: pointer;">✕</button>
+          </div>
+        `;
+      });
+
+      list.innerHTML = html;
+      document.getElementById('cartTotalVal').innerText = `$${total.toLocaleString('es-CO')} COP`;
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      actualizarCarrito();
+    }
+
+    function checkoutWhatsApp() {
+      if (cart.length === 0) {
+        alert("Agrega al menos un combo al carrito para continuar.");
+        return;
+      }
+      let total = 0;
+      let detalle = cart.map(i => {
+        total += i.precio;
+        return `• ${i.nombre} ($${i.precio.toLocaleString('es-CO')} COP)`;
+      }).join('%0A');
+
+      const mensaje = `¡Hola Lune! 🌙✨ Me encantaron sus combos y quiero pedir:%0A%0A${detalle}%0A%0ATotal: $${total.toLocaleString('es-CO')} COP%0A%0A¿Qué medios de pago tienen disponibles? 💜`;
+      window.open(`https://wa.me/573000000000?text=${mensaje}`, '_blank');
+    }
+  </script>
+</body>
+</html>
